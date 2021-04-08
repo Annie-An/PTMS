@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="generator" content="R package animation 2.6">
+	<title>the Law of Large Numbers</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/scianimator.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/github.min.css">
+
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/jquery.scianimator.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/languages/r.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+	<div class="scianimator"><div id="normlln" style="display: inline-block;"></div></div>
+	<div class="scianimator" style="width: 480px; text-align: left"><pre><code class="r">## the Law of Large Numbers:standard normal distribution
+library(animation)
+ani.options(interval = 0.1, nmax = 150)
+lln.ani(cex = 0.6)
+## R version 4.0.0 (2020-04-24)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Other packages: animation 2.6</code></pre></div>
+	<script src="js/normlln.js"></script>
+	<div class="scianimator"><div id="chi_lln" style="display: inline-block;"></div></div>
+	<div class="scianimator" style="width: 480px; text-align: left"><pre><code class="r">## the Law of Large Numbers:chi-square distribution;
+##   population mean = 5
+library(animation)
+ani.options(interval = 0.1, nmax = 150)
+lln.ani(FUN = function(n, mu) rchisq(n, df = mu), mu = 5, 
+    cex = 0.6)
+## R version 4.0.0 (2020-04-24)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Other packages: animation 2.6</code></pre></div>
+	<script src="js/chi_lln.js"></script>
+<!-- highlight R code -->
+
+</body>
+</html>
