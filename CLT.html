@@ -1,0 +1,64 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="generator" content="R package animation 2.6">
+	<title>Animations Using the R Language</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/scianimator.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/github.min.css">
+
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/jquery.scianimator.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/languages/r.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+	<div class="scianimator"><div id="CLT_norm" style="display: inline-block;"></div></div>
+	<div class="scianimator" style="width: 480px; text-align: left"><pre><code class="r">## CLT:normal distribution
+library(animation)
+ani.options(interval = 0.5, nmax = 150)
+par(mar = c(3, 3, 0.2, 0.1), mgp = c(1.5, 0.5, 0), tcl = -0.3)
+clt.ani(FUN = runif, mean = 0.5, sd = sqrt(1/12), type = "s")
+## R version 4.0.0 (2020-04-24)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Other packages: animation 2.6</code></pre></div>
+	<script src="js/CLT_norm.js"></script>
+	<div class="scianimator"><div id="CLT_exp" style="display: inline-block;"></div></div>
+	<div class="scianimator" style="width: 480px; text-align: left"><pre><code class="r">## CLT:exp distribution
+library(animation)
+ani.options(interval = 0.5, nmax = 150)
+par(mar = c(3, 3, 0.2, 0.1), mgp = c(1.5, 0.5, 0), tcl = -0.3)
+clt.ani(type = "s")
+## R version 4.0.0 (2020-04-24)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Other packages: animation 2.6</code></pre></div>
+	<script src="js/CLT_exp.js"></script>
+	<div class="scianimator"><div id="CLT_chi" style="display: inline-block;"></div></div>
+	<div class="scianimator" style="width: 480px; text-align: left"><pre><code class="r">## CLT:Chi-square distribution
+library(animation)
+ani.options(interval = 0.5, nmax = 150)
+par(mar = c(3, 3, 1, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
+f = function(n) rchisq(n, 5)
+clt.ani(FUN = f, mean = 5, sd = sqrt(2 * 5))
+## R version 4.0.0 (2020-04-24)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Other packages: animation 2.6</code></pre></div>
+	<script src="js/CLT_chi.js"></script>
+	<div class="scianimator"><div id="CLT_cauchy" style="display: inline-block;"></div></div>
+	<div class="scianimator" style="width: 480px; text-align: left"><pre><code class="r">## the variance of the Cauchy distribution does not exist.
+library(animation)
+ani.options(interval = 0.5, nmax = 150)
+par(mar = c(3, 3, 0.2, 0.1), mgp = c(1.5, 0.5, 0), tcl = -0.3)
+clt.ani(FUN = rcauchy, mean = NULL)
+## R version 4.0.0 (2020-04-24)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Other packages: animation 2.6</code></pre></div>
+	<script src="js/CLT_cauchy.js"></script>
+<!-- highlight R code -->
+
+</body>
+</html>
